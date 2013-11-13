@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html><html>
+	<head>
+		<title>Main Page</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="generator" content="Wakanda GUIDesigner"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<meta name="WAF.packageJson"/>
+		<meta name="WAF.catalog" content="FBApiKeys"/>
+		<meta name="wakanda-version" content="6 build 6.146205"/>
+		<meta name="wakanda-build" content="6.146205"/>
+		<meta name="WAF.config.loadCSS" id="waf-interface-css" content="styles/index.css"/>
+		<meta name="WAF.config.loadCSS" id="waf-project-css" content="/application.css"/>
+
+		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="FBApiKeys" data-lib="WAF" data-id="fBApiKeys" data-dataType="string" data-autoLoad="true" content="fBApiKeys"/><meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
+</head>
+	<body id="waf-body" data-workspace-width="0" data-workspace-orientation="portrait" data-workspace-height="0" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-theme="default" data-rpc-validation="false" data-rpc-namespace="rpc" data-rpc-activate="false" data-platform="desktop" data-lib="WAF" data-group="[]" data-entire-model="false" data-apple-meta-tags-status-bar="default" style="bottom:;right:;visibility:hidden;">
+	<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '635753499819649',                        // App ID from the app dashboard
+      channelUrl : '//localhost:8082/channel/channel.html', // Channel file for x-domain comms
+      status     : true,                                 // Check Facebook Login status
+      xfbml      : true                                  // Look for social plugins on the page
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+FB.ui(
+  {
+   method: 'feed',
+   name: 'The Facebook SDK for Javascript',
+   caption: 'Bringing Facebook to the desktop and mobile web',
+   description: (
+      'A small JavaScript library that allows you to harness ' +
+      'the power of Facebook, bringing the user\'s identity, ' +
+      'social graph and distribution power to your site.'
+   ),
+   link: 'https://developers.facebook.com/docs/reference/javascript/',
+   picture: 'http://www.fbrell.com/public/f8.jpg'
+  },
+  function(response) {
+    if (response && response.post_id) {
+      alert('Post was published.');
+    } else {
+      alert('Post was not published.');
+    }
+  }
+);
+FB.api('/me', function(response) {
+  alert('Your name is ' + response.name);
+});
+
+</script>			
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
+		
+	
+	
+	
+	
+	
+				<div id="wVFBAppKeys" data-type="container" data-lib="WAF" data-label-position="top" data-label="" data-hideSplitter="true" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true" class="waf-widget waf-container waf-container-level-0 waf-level-0">
+	 	<button id="button1" data-type="button" data-text="Retrieve" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button "></button>
+ 		<div id="dgFBAppKeys" data-type="dataGrid" data-selection-mode="single" data-lib="WAF" data-label-position="top" data-label="" data-footer-text="item(s)" data-display-error="true" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-column="[{'sourceAttID':'App_Name','colID':'App_Name','width':'150','title':'App_Name'},{'sourceAttID':'App_NameSpace','colID':'App_NameSpace','width':'150','title':'App_NameSpace'},{'sourceAttID':'App_ID','colID':'App_ID','width':'150','title':'App_ID'},{'sourceAttID':'App_Secret','colID':'App_Secret','width':'150','title':'App_Secret'}]" data-binding="fBApiKeys" class="waf-widget waf-dataGrid "></div>
+ 		<div id="FBAppKeysTitle" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-autoWidth="true" class="waf-widget waf-richText ">Facebook</div>
+ 				<div id="result1" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-autoWidth="false" class="waf-widget waf-richText "></div>
+ 	</div>
+	
+		<script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
+	</body>
+</html>
